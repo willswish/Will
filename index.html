@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will - Portfolio</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#">Will</a>
+        </div>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="container">
+      <div class="home-row">
+        <div class="home-content">
+          <h1>Hi, I'm a Web Developer</h1>
+          <p id="typewriter">A passionate web developer specialized in creating modern, responsive websites. Let's work together to
+            build something great!</p>
+          <a href="#projects" class="btn">View My Work</a>
+
+          <!-- Social Media Links with FontAwesome Icons -->
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61568308120853" target="_blank">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/wcbarrios/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column for Image -->
+        <div class="home-image">
+          <img src="images/me.png" alt="My Photo" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="images/w.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="about-text">
+          <p>Hello! I'm a fresh graduate with a passion for web development. I specialize in building websites that are
+            not only visually appealing but also highly functional. I have experience in HTML, CSS, JavaScript, PHP and a
+            variety of web development tools and frameworks.</p>
+          
+          <p>When I'm not coding, I enjoy exploring new technologies, working on personal projects, and contributing to
+            open-source communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/business.jpg" alt="Service 1">
+        <h3>Business Website Development</h3>
+        <p>I build professional business or company websites that provide information about your company, its products, or its services.</p>
+        <a href="#contact" class="btn">Inquire Now</a>
+      </div>
+      <div class="service-card">
+        <img src="images/ecommerce.jpg" alt="Service 2">
+        <h3>E-Commerce Solutions</h3>
+        <p>Custom online e-commerce platforms with user authentication, shopping cart, and secure payment integration using JavaScript and PHP.</p>
+        <a href="#contact" class="btn">Inquire Now</a>
+      </div>
+      <div class="service-card">
+        <img src="images/interactive.jpg" alt="Service 3">
+        <h3>Interactive Web Applications</h3>
+        <p>Engaging web apps with dynamic elements, such as to-do lists, calculators, quizzes, and more, for real-time user interaction.</p>
+        <a href="#contact" class="btn">Inquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section">
+  <div class="container">
+    <h2>Portfolio</h2>
+
+    <div class="portfolio-tabs">
+      <button class="tab-btn active" onclick="showTab('all', this)">All</button>
+      <button class="tab-btn" onclick="showTab('education', this)">Education</button>
+      <button class="tab-btn" onclick="showTab('system', this)">System Created</button>
+      <button class="tab-btn" onclick="showTab('achievements', this)">Achievements</button>
+    </div>
+
+    <div class="portfolio-content">
+  <div class="tab-content" id="tab-education">
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/adu.jpg" alt="Education 1" class="popup-img" data-img="images/adu.jpg">
+        <h3>Adamson University</h3>
+        <p class="portfolio-subtitle">Bachelor of Science in Information Technology</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sb.jpg" alt="Education 1" class="popup-img" data-img="images/sb.jpg">
+        <h3>San Beda College Alabang</h3>
+        <p class="portfolio-subtitle">Senior High School</p>
+      </div>
+      <!-- Add more items here -->
+    </div>
+  </div>
+  <div class="tab-content" id="tab-system">
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/lev.png" alt="System 1" class="popup-img" data-img="images/lev.png">
+        <h3>Leveriza Health Center</h3>
+        <p class="portfolio-subtitle">A Web-based Network Monitoring System Food Intake and Diet for Malnourished communities
+          in Leveriza Health Center with SMS & Security Features</p>
+        </p>
+      </div>
+      <!-- Add more items here -->
+    </div>
+  </div>
+  <div class="tab-content" id="tab-achievements">
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/microsoft.jpg" alt="Achievement 1" class="popup-img" data-img="images/microsoft.jpg">
+        <h3>Microsoft Technology Associate</h3>
+        <p class="portfolio-subtitle">Certification in Software Development Fundamentals</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/alison.png" alt="Achievement 1" class="popup-img" data-img="images/alison.png">
+        <h3>Web Development Fundamentals with HTML & CSS</h3>
+        <p class="portfolio-subtitle">Certification in Web Development Fundamentals</p>
+      </div>
+      <!-- Add more items here -->
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<!-- Image Modal -->
+<div id="imgModal" class="img-modal">
+  <span class="img-modal-close">&times;</span>
+  <img class="img-modal-content" id="imgModalSrc">
+</div>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-content">
+
+        <!-- Left Column: Placeholder Image -->
+        <div class="skills-image">
+          <img src="images/skill.jpg" alt="Placeholder Portrait" class="portrait-img" />
+        </div>
+
+        <!-- Right Column: Skill Bars -->
+        <div class="skills-bars">
+
+          <div class="skill">
+            <h3>HTML</h3>
+            <div class="skill-bar">
+              <div class="skill-fill html">
+                <span class="skill-percentage">95%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>CSS</h3>
+            <div class="skill-bar">
+              <div class="skill-fill css">
+                <span class="skill-percentage">90%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+              <div class="skill-fill js">
+                <span class="skill-percentage">85%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>PHP</h3>
+            <div class="skill-bar">
+              <div class="skill-fill php">
+                <span class="skill-percentage">90%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <h3>WordPress</h3>
+            <div class="skill-bar">
+              <div class="skill-fill wordpress">
+                <span class="skill-percentage">90%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to send me a message or reach out directly!</p>
+      <div class="contact-content">
+        <form class="contact-form" action="contact.php" method="post">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info on the Right -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i> <!-- Location Icon -->
+              <strong>Location:</strong>
+              <p>Manila, Philippines</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i> <!-- Email Icon -->
+              <strong>Email:</strong>
+              <p>wchristianbarrios@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+  </section>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

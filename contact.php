@@ -16,11 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // SMTP configuration
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';  // Replace with your SMTP server
+            $mail->Host = 'smtp.gmail.com';  
             $mail->SMTPAuth = true;
-            $mail->Username = 'wchristianbarrios@gmail.com'; // Your SMTP email
-            $mail->Password = 'wmcv nlqr phfk dlae'; // Your SMTP email password or app password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encryption type
+            $mail->Username = 'wchristianbarrios@gmail.com'; 
+            $mail->Password = ''; 
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
             $mail->Port = 587; // TCP port
 
             // Email settings

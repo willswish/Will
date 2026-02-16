@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="darkmode.css">
 </head>
 
 <body>
@@ -28,6 +29,9 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="theme-toggle" id="theme-toggle">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </div>
         <div class="mobile-menu-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -77,12 +81,14 @@
       <div class="about-content">
         <img src="images/w.jpg" alt="Profile Picture" class="profile-pic">
         <div class="about-text">
+          <h3>Web Developer based in Philippines</h3>
           <p>Hello! I'm a fresh graduate with a passion for web development. I specialize in building websites that are
             not only visually appealing but also highly functional. I have experience in HTML, CSS, JavaScript, PHP and a
             variety of web development tools and frameworks.</p>
           
           <p>When I'm not coding, I enjoy exploring new technologies, working on personal projects, and contributing to
             open-source communities.</p>
+          <a href="#contact" class="btn">Let's Talk</a>
         </div>
       </div>
     </div>
@@ -114,7 +120,6 @@
     </div>
   </div>
 </section>
-
 
 
 <!-- Portfolio Section -->
@@ -168,6 +173,41 @@
         <img src="images/alison.png" alt="Achievement 1" class="popup-img" data-img="images/alison.png">
         <h3>Web Development Fundamentals with HTML & CSS</h3>
         <p class="portfolio-subtitle">Certification in Web Development Fundamentals</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/tech.png" alt="Achievement 1" class="popup-img" data-img="images/tech.png">
+        <h3>Technical Support Fundamentals</h3>
+        <p class="portfolio-subtitle"></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sysad.png" alt="Achievement 1" class="popup-img" data-img="images/sysad.png">
+        <h3>System Administration and Infrastructure Services</h3>
+        <p class="portfolio-subtitle"></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/net.png" alt="Achievement 1" class="popup-img" data-img="images/net.png">
+        <h3>Computer Networking</h3>
+        <p class="portfolio-subtitle"></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/os.png" alt="Achievement 1" class="popup-img" data-img="images/os.png">
+        <h3>Operating Systems</h3>
+        <p class="portfolio-subtitle"></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sec.png" alt="Achievement 1" class="popup-img" data-img="images/sec.png">
+        <h3>IT Security</h3>
+        <p class="portfolio-subtitle"></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/itsupp.png" alt="Achievement 1" class="popup-img" data-img="images/itsupp.png">
+        <h3>Google IT support</h3>
+        <p class="portfolio-subtitle"></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/hardware.png" alt="Achievement 1" class="popup-img" data-img="images/hardware.png">
+        <h3>Computer Hardware Basics</h3>
+        <p class="portfolio-subtitle"></p>
       </div>
       <!-- Add more items here -->
     </div>
@@ -291,6 +331,8 @@
 
 
   <script src="script.js"></script>
+  <script src="darkmode.js"></script>
+  <script src="skills.js"></script>
 </body>
 
 </html>

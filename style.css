@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -328,6 +329,8 @@ nav ul li a:hover {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid #48CAE4;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .about-text {
@@ -338,6 +341,18 @@ nav ul li a:hover {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.about-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #48CAE4;
+  margin-bottom: 15px;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  border-color: #33b5e5;
 }
 /* --- Responsive adjustments for About Section --- */
 @media (max-width: 900px) {
@@ -508,36 +523,37 @@ nav ul li a:hover {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 15px;
   font-size: 12px;
-  font-weight: normal;
-  color: white;
+  font-weight: 600;
+  color: #1a1a1a;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
   width: 0; /* Start at 0 for animation */
-  transition: width 2s ease;
+  background: linear-gradient(90deg, #48CAE4, #2493b6);
+  box-shadow: 0 0 10px rgba(72, 202, 228, 0.4);
+  transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.skill-fill.html { width: 95%; background-color: black; }
-.skill-fill.css { width: 90%; background-color: black; }
-.skill-fill.js { width: 85%; background-color: black; }
-.skill-fill.php { width: 85%; background-color: black; }
-.skill-fill.wordpress { width: 90%; background-color: black; }
+.skills-section.active .skill-fill.html { width: 95%; }
+.skills-section.active .skill-fill.css { width: 90%; }
+.skills-section.active .skill-fill.js { width: 85%; }
+.skills-section.active .skill-fill.php { width: 85%; }
+.skills-section.active .skill-fill.wordpress { width: 90%; }
+
+/* Staggered Animation */
+.skills-section.active .skill:nth-child(1) .skill-fill { transition-delay: 0.1s; }
+.skills-section.active .skill:nth-child(2) .skill-fill { transition-delay: 0.2s; }
+.skills-section.active .skill:nth-child(3) .skill-fill { transition-delay: 0.3s; }
+.skills-section.active .skill:nth-child(4) .skill-fill { transition-delay: 0.4s; }
+.skills-section.active .skill:nth-child(5) .skill-fill { transition-delay: 0.5s; }
 
 /* Percentage inside bar */
 .skill-percentage {
-  position: absolute;
-  width: 100%;
-  text-align: center;
+  position: relative;
   z-index: 1;
-  font-weight: normal;
-}
-
-/* Keyframes for percentage animation */
-@keyframes fillSkill {
-  from { width: 0; }
-  to { width: var(--target-width); }
 }
 
 @media (max-width: 1024px) {
@@ -639,7 +655,7 @@ nav ul li a:hover {
 
 /* Contact Info on the Right */
 .contact-info {
-  flex: 1 1 10%; 
+  flex: 1 1 300px; 
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -880,5 +896,3 @@ nav ul li a:hover {
   z-index: 1;
   transform: scale(1);
 }
-
-
